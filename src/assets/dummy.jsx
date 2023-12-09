@@ -3,16 +3,20 @@ import scroll from "../assets/ads/scroll.jpg";
 
 export const adsData = [
     {
-        src: scroll,
-        isVideo: false,
+        src: "/vids/scroll.mp4",
+        isVideo: true,
         link: "https://scroll.io",
-        timeout: 10,
     },
     {
         src: huddle,
         isVideo: false,
         link: "https://huddle01.com",
         timeout: 15,
+    },
+    {
+        src: "/vids/push.mp4",
+        isVideo: true,
+        link: "https://push.io",
     },
 ];
 
