@@ -6,6 +6,7 @@ import { FaPeoplePulling } from "react-icons/fa6";
 import Link from "next/link";
 import { FaEthereum } from "react-icons/fa6";
 import { usePathname } from "next/navigation";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 export default function SideLayout({ children }) {
     const pathname = usePathname();
@@ -30,11 +31,11 @@ export default function SideLayout({ children }) {
             path: "/dashboard/referral",
             icon: <FaPeoplePulling />,
         },
-        {
-            name: "Logout",
-            path: "/dashboard/logout",
-            icon: <IoLogOut />,
-        },
+        // {
+        //     name: "Logout",
+        //     path: "/dashboard/logout",
+        //     icon: <IoLogOut />,
+        // },
     ];
 
     return (
@@ -45,19 +46,24 @@ export default function SideLayout({ children }) {
                         Ads<span className="text-pri">ie</span>
                     </span>
                 </Link>
-                {tabs.map((tab, index) => (
-                    <Link
-                        key={index}
-                        href={`${tab.path}`}
-                        className={` ${
-                            pathname === `${tab.path}`
-                                ? "text-white bg-pri"
-                                : "text-black bg-primary/0"
-                        } p-3 anim px-6 flex w-full gap-2 justify-start items-center rounded-lg`}
-                    >
-                        {tab.icon} {tab.name}
-                    </Link>
-                ))}
+                <div className="flex h-[85%] -mt-3 justify-between flex-col">
+                    <div className="felx flex-col ">
+                        {tabs.map((tab, index) => (
+                            <Link
+                                key={index}
+                                href={`${tab.path}`}
+                                className={` ${
+                                    pathname === `${tab.path}`
+                                        ? "text-white bg-pri"
+                                        : "text-black bg-primary/0"
+                                } p-3 anim px-6 my-2 flex w-full gap-2 justify-start items-center rounded-lg`}
+                            >
+                                {tab.icon} {tab.name}
+                            </Link>
+                        ))}
+                    </div>
+                    <ConnectButton />
+                </div>
             </div>
             <aside className="w-full">{children}</aside>
         </div>
