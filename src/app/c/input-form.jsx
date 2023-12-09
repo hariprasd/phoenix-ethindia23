@@ -41,7 +41,8 @@ const FormComponent = () => {
             >
                 <input {...getInputProps()} />
                 <p className="text-gray-700">
-                    Drag 'n' drop some files here, or click to select files
+                    Drag &apos;n&apos; drop some files here, or click to select
+                    files
                 </p>
             </div>
 

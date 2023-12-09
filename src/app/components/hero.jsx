@@ -8,7 +8,7 @@ import Link from "next/link";
 import { PiTargetThin } from "react-icons/pi";
 
 export default function HeroSection() {
-    const [type, setType] = useState("user"); // 'user' or 'enterprise'
+    const [type, setType] = useState("user"); // &apos;user&apos; or &apos;enterprise&apos;
 
     const toggleType = () => {
         setType(type === "user" ? "enterprise" : "user");
