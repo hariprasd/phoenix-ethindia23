@@ -4,6 +4,7 @@ import Captcha from "./components/captcha";
 import bg from "../assets/bg.svg";
 import HeroSection from "./components/hero";
 import AnimatedText from "./components/text-anim";
+import Pricing from "./components/pricing";
 export default function Home() {
     return (
         <main>
@@ -18,6 +19,9 @@ export default function Home() {
                 <div className="mt-24">
                     <HeroSection type={"user"} />
                 </div>
+            </section>
+            <section className="mt-16">
+                <Pricing />
             </section>
         </main>
     );

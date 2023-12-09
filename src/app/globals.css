@@ -13,7 +13,7 @@
     }
 
     .pri-btn {
-        @apply text-xs uppercase anim tracking-widest bg-green-600 hover:ring-green-400 ring-2 ring-green-50/0 rounded-full px-6 p-3 text-white;
+        @apply text-xs uppercase anim tracking-widest bg-pri hover:ring-pri ring-2 ring-pri/0 rounded-full px-6 p-3 text-white;
     }
 }
 body {
@@ -30,6 +30,7 @@ body {
 
 ::-webkit-scrollbar {
     width: 4px;
+    height: 4px;
     background-color: #ffffff;
 }
 
