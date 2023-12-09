@@ -34,3 +34,26 @@ export const revenueData = [
         amount: 35860,
     },
 ];
+
+export const referredByYouData = [
+    "John Doe",
+    "Jane Doe",
+    "Mark Doe",
+    "Sarah Doe",
+    "Sam Doe",
+    "Alex Doe",
+    "James Doe",
+    "Lily Doe",
+    "Olivia Doe",
+    "Emma Doe",
+    "David Doe",
+    "Emma Doe",
+];
+
+export const userData = [
+    {
+        name: "John Doe",
+        email: "bZLd5@example.com",
+        number: "9876543210",
+    },
+];
