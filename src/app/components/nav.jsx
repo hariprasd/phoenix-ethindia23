@@ -17,7 +17,7 @@ export default function Nav() {
     ];
     return (
         <nav>
-            <ul className="flex justify-between items-center w-full p-4 px-8">
+            <ul className="flex pc justify-between items-center w-full p-4 px-8">
                 <h1 className="text-4xl  tracking-tighter font-bold">Adsie</h1>
                 <div className="flex gap-8 items-center mr-3">
                     {links.map((link, i) => (
@@ -25,7 +25,7 @@ export default function Nav() {
                             {link.name}
                         </Link>
                     ))}
-                    <button className="bg-zinc-700 text-base text-white rounded-md p-3 px-5">
+                    <button className="bg-zinc-900 text-base font-light text-white rounded-full p-3 px-5">
                         Connect Wallet
                     </button>
                 </div>

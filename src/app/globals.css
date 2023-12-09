@@ -1,7 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components {
+    .anim {
+        @apply transition-all duration-[400ms] ease-in-out;
+    }
+    .anim-slo {
+        @apply transition-all duration-[800ms] ease-in-out;
+    }
+    .anim-fst {
+        @apply transition-all duration-[200ms] ease-linear;
+    }
 
+    .pri-btn {
+        @apply text-xs uppercase anim tracking-widest bg-green-600 hover:ring-green-400 ring-2 ring-green-50/0 rounded-full px-6 p-3 text-white;
+    }
+}
 body {
     color: #000;
     background-color: white;
