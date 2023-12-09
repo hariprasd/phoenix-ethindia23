@@ -4,7 +4,7 @@ export default function RegisterForm() {
     const ipStyle = ` border border-gray-400/30 outline-none rounded-md my-2 p-2 px-3 w-full`;
     return (
         <>
-            <div className="flex bg-blue-50  flex-col min-h-screen w-screen justify-center items-center">
+            <div className="flex bg-blue-50 relative flex-col min-h-screen w-screen justify-center items-center">
                 <h1 className="text-2xl">Register</h1>
                 <form className="flex p-8 mt-6 flex-col w-11/12 md:w-4/6 lg:w-1/3 gap-3 rounded-xl drop-shadow-lg bg-white">
                     <label>
