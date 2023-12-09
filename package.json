@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@pushprotocol/restapi": "^1.4.45",
     "@rainbow-me/rainbowkit": "^1.3.0",
+    "axios": "^1.6.2",
+    "express": "^4.18.2",
     "framer-motion": "^10.16.16",
     "next": "14.0.4",
     "react": "^18",

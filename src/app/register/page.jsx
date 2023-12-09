@@ -2,40 +2,47 @@
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import wallet from "../../assets/wallet.png";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+import sendPushNotification from "../register/sendPushNotifications"
+import { useAccount } from "wagmi";
 import { IoMdWallet } from "react-icons/io";
-import { useState } from "react";
+import { useState ,useEffect } from "react";
 import RegisterForm from "./register-user";
 export default function Register() {
-    const searchParams = useSearchParams();
-    const type = searchParams.get("type");
+  const searchParams = useSearchParams();
+  const type = searchParams.get("type");
+  console.log(useAccount());
+  const {address , isConnected} = useAccount();
 
-    const [isConnected, setIsConnected] = useState(false);
 
-    return (
-        <section>
-            {isConnected ? (
-                <div>
+  useEffect(() => {
+    if (isConnected) {
+        console.log("Address is connected")
+      sendPushNotification();
+    }
+  }, [isConnected]);
+  return (
+    <section>
+        <div className="flex relative overflow-hidden h-screen w-screen justify-center items-center flex-col">
+            <h1 className="text-5xl tracking-tighter -mt-24">
+                {!isConnected ? 'Register' : `Registered as ${type && type}`} 
+            </h1>
+            <div className="relative mt-6">
+            <ConnectButton />
+            </div>
+            {!isConnected &&
+                
                     <RegisterForm />
-                </div>
-            ) : (
-                <div className="flex relative overflow-hidden h-screen w-screen justify-center items-center flex-col">
-                    <h1 className="text-5xl tracking-tighter -mt-24">
-                        Register as {type && type}
-                    </h1>
-                    <button
-                        onClick={() => setIsConnected(true)}
-                        className=" pri-btn mx-auto w-fit block mt-6"
-                    >
-                        {" "}
-                        Connect Wallet{" "}
-                        <IoMdWallet className="inline ml-1 mb-0.5" />
-                    </button>
-                    <Image
-                        className="z-[-99] fixed -bottom-1/2 centerh"
-                        src={wallet}
-                    />
-                </div>
-            )}
-        </section>
-    );
+                
+            }
+            <Image
+                className="z-[-99] fixed -bottom-1/2 centerh"
+                src={wallet}
+                alt=""
+            />        
+        </div>
+    </section>
+);
+ 
+
 }
