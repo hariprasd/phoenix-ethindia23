@@ -113,10 +113,11 @@ export default function HeroSection() {
                 </span>
 
                 <Link
-                    className="pri-btn md:text-lg font-medium mt-8 md:mt-16 px-8 block w-fit mx-auto"
-                    href={`/register?${
-                        type === "user" ? "type=user" : "type=enterprise"
-                    }`}
+                    className="pri-btn bg-black md:text-lg font-medium mt-8 md:mt-16 px-8 block w-fit mx-auto"
+                    // href={`/register?${
+                    //     type === "user" ? "type=user" : "type=enterprise"
+                    // }`}
+                    href={`${type === "user" ? "/register" : "/c/register"}`}
                 >
                     {currentChoice[1].cta}
                 </Link>

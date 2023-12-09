@@ -1,7 +1,7 @@
 import { userData } from "@/assets/dummy";
 import Image from "next/image";
-import qr from "../../../assets/qrcode.png";
-import absbg from "../../../assets/abs-bg.png";
+import qr from "../../../../assets/qrcode.png";
+import absbg from "../../../../assets/abs-bg.png";
 
 export default function Profile() {
     const ipStyle = ` text-xl font-bold  my-5 w-full`;

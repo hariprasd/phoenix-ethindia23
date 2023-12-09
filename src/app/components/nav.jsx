@@ -17,20 +17,20 @@ export default function Nav() {
     ];
     return (
         <nav>
-            <ul className="flex pc justify-between items-center w-full p-4 px-8">
+            <ul className="flex pc justify-center mt-4 items-center w-full p-4 px-8">
                 <h1 className="text-4xl  tracking-tighter font-bold">
                     Ads<span className="text-pri">ie</span>
                 </h1>
-                <div className="flex gap-8 items-center mr-3">
+                {/* <div className="flex gap-8 items-center mr-3">
                     {links.map((link, i) => (
                         <Link href={link.path} className="p-2 py-4" key={i}>
                             {link.name}
                         </Link>
                     ))}
-                    {/* <button className="bg-zinc-900 text-base font-light text-white rounded-full p-3 px-5">
+                    <button className="bg-zinc-900 text-base font-light text-white rounded-full p-3 px-5">
                         Connect Wallet
-                    </button> */}
-                </div>
+                    </button>
+                </div> */}
             </ul>
         </nav>
     );
