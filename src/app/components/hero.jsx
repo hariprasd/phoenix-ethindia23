@@ -72,17 +72,32 @@ export default function HeroSection() {
     return (
         <div>
             <div className="toggle-switch">
-                <motion.button
-                    whileTap={{ scale: 0.95 }}
-                    transition={{ duration: 0.5 }}
-                    className="text-xs uppercase tracking-widest backdrop-blur-md ring-green-600/50 bg-green-300/10 text-black hover:ring-green-400 ring-2 rounded-full px-4 md:px-6 p-3 mx-auto w-fit block "
-                    onClick={toggleType}
-                >
-                    {type === "user"
-                        ? " are you a Business Owner?"
-                        : "are you a User?"}
-                    {/* <HiOutlineSwitchVertical className="inline ml-1 mb-0.5 text-md" /> */}
-                </motion.button>
+                <div className="flex justify-center gap-6">
+                    <motion.button
+                        whileTap={{ scale: 0.95 }}
+                        transition={{ duration: 0.5 }}
+                        className={`text-xs uppercase tracking-widest backdrop-blur-md bg-green-300/10 text-black  rounded-full px-4 md:px-6 p-3 w-fit block ${
+                            type === "user"
+                                ? "bg-green-600 text-white"
+                                : "ring-green-500 ring-2 hover:ring-green-200 anim"
+                        }`}
+                        onClick={toggleType}
+                    >
+                        User
+                    </motion.button>
+                    <motion.button
+                        whileTap={{ scale: 0.95 }}
+                        transition={{ duration: 0.5 }}
+                        className={`text-xs uppercase tracking-widest backdrop-blur-md bg-green-300/10 text-black  rounded-full px-4 md:px-6 p-3 w-fit block ${
+                            type === "enterprise"
+                                ? "bg-green-600 text-white"
+                                : "ring-green-500 ring-2 hover:ring-green-200 anim"
+                        }`}
+                        onClick={toggleType}
+                    >
+                        Business Owner
+                    </motion.button>
+                </div>
             </div>
             <div className="text-3xl md:text-6xl mt-8 tracking-tighter text-center font-black">
                 <AnimatedText
