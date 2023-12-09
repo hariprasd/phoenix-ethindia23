@@ -111,7 +111,9 @@ export default function HeroSection() {
 
                 <Link
                     className="pri-btn md:text-lg font-medium mt-8 md:mt-16 px-8 block w-fit mx-auto"
-                    href={"#"}
+                    href={`/register?${
+                        type === "user" ? "type=user" : "type=enterprise"
+                    }`}
                 >
                     {currentChoice[1].cta}
                 </Link>
