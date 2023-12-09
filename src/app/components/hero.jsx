@@ -73,7 +73,7 @@ export default function HeroSection() {
 
     return (
         <div>
-            <div className="toggle-switch">
+            <div className="toggle-switch fixed bottom-16 centerh ">
                 <div className="flex justify-center gap-6">
                     <motion.button
                         whileTap={{ scale: 0.95 }}
@@ -109,7 +109,7 @@ export default function HeroSection() {
                 <span className="block w-fit mx-auto relative md:mt-2">
                     {" "}
                     with ads<span className="text-pri">ie</span>
-                    <PiTargetThin className=" text-pri inline ml-1 text-5xl" />
+                    <PiTargetThin className=" text-pri absolute inline translate-y-3 ml-1 text-5xl" />
                 </span>
 
                 <Link

@@ -19,7 +19,7 @@ export default function Nav() {
         <nav>
             <ul className="flex pc justify-center mt-4 items-center w-full p-4 px-8">
                 <h1 className="text-4xl  tracking-tighter font-bold">
-                    Ads<span className="text-pri">ie</span>
+                    ads<span className="text-pri">ie</span>
                 </h1>
                 {/* <div className="flex gap-8 items-center mr-3">
                     {links.map((link, i) => (

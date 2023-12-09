@@ -33,12 +33,14 @@ export default function Register() {
                 <div className="relative mt-6">
                     <ConnectButton />
                 </div>
-                <Link
-                    href={"/c/dashboard"}
-                    className="bg-pri px-4 p-2 text-white mt-12 text-center text-base  rounded-md"
-                >
-                    Go to Business Dashboard ↗
-                </Link>
+                {isConnected && (
+                    <Link
+                        href={"/c/dashboard"}
+                        className="bg-pri px-4 p-2 text-white mt-12 text-center text-base  rounded-md"
+                    >
+                        Go to Business Dashboard ↗
+                    </Link>
+                )}
                 {isConnected && close && <RegisterForm />}
                 <Image
                     className="z-[-99] fixed -bottom-1/2 centerh"

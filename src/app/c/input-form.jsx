@@ -8,6 +8,7 @@ const FormComponent = () => {
     const [link, setLink] = useState("");
     const [timeout, setTimeoutValue] = useState();
     const [isVideo, setIsVideo] = useState(false);
+    const [reward, setReward] = useState();
 
     const onDrop = useCallback((acceptedFiles) => {
         // Assuming only the first file is relevant
@@ -34,7 +35,7 @@ const FormComponent = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="p-4 max-w-lg mx-auto">
+        <form onSubmit={handleSubmit} className="p-4 ">
             <div
                 {...getRootProps()}
                 className="dropzone border-dashed border-2 border-gray-300 p-4 text-center cursor-pointer"
@@ -72,6 +73,16 @@ const FormComponent = () => {
                 value={timeout}
                 onChange={(e) => setTimeoutValue(e.target.value)}
                 placeholder="Timeout in seconds"
+                className="mt-4 w-full p-2 border-2 border-gray-300 rounded-md"
+            />
+
+            <input
+                type="text"
+                placeholder="Reward per view"
+                value={reward}
+                onChange={(e) => {
+                    setReward(e.target.value);
+                }}
                 className="mt-4 w-full p-2 border-2 border-gray-300 rounded-md"
             />
 
