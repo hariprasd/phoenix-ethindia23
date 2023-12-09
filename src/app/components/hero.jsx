@@ -5,6 +5,8 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiOutlineSwitchVertical } from "react-icons/hi";
 import Link from "next/link";
+import { PiTargetThin } from "react-icons/pi";
+
 export default function HeroSection() {
     const [type, setType] = useState("user"); // 'user' or 'enterprise'
 
@@ -22,8 +24,8 @@ export default function HeroSection() {
         {
             desc: (
                 <p className="font-bold">
-                    Watch <span className="text-green-600">• </span>Earn{" "}
-                    <span className="text-green-600">• </span> Repeat
+                    Watch <span className="text-pri">• </span>Earn{" "}
+                    <span className="text-pri">• </span> Repeat
                 </p>
             ),
         },
@@ -47,7 +49,7 @@ export default function HeroSection() {
                         className="font-bold"
                     >
                         Advertise smart
-                        <span className="text-green-600">• </span> Pay less{" "}
+                        <span className="text-pri">• </span> Pay less{" "}
                     </motion.p>
                 </AnimatePresence>
             ),
@@ -76,10 +78,10 @@ export default function HeroSection() {
                     <motion.button
                         whileTap={{ scale: 0.95 }}
                         transition={{ duration: 0.5 }}
-                        className={`text-xs uppercase tracking-widest backdrop-blur-md bg-green-300/10 text-black  rounded-full px-4 md:px-6 p-3 w-fit block ${
+                        className={`text-xs uppercase tracking-widest backdrop-blur-md text-black  rounded-full px-4 md:px-6 p-3 w-fit block ${
                             type === "user"
-                                ? "bg-green-600 text-white"
-                                : "ring-green-500 ring-2 hover:ring-green-200 anim"
+                                ? "bg-pri text-white"
+                                : "ring-pri ring-2 hover:ring-pri/50 bg-pri/10 anim"
                         }`}
                         onClick={toggleType}
                     >
@@ -88,10 +90,10 @@ export default function HeroSection() {
                     <motion.button
                         whileTap={{ scale: 0.95 }}
                         transition={{ duration: 0.5 }}
-                        className={`text-xs uppercase tracking-widest backdrop-blur-md bg-green-300/10 text-black  rounded-full px-4 md:px-6 p-3 w-fit block ${
+                        className={`text-xs uppercase tracking-widest backdrop-blur-md text-black  rounded-full px-4 md:px-6 p-3 w-fit block ${
                             type === "enterprise"
-                                ? "bg-green-600 text-white"
-                                : "ring-green-500 ring-2 hover:ring-green-200 anim"
+                                ? "bg-pri text-white"
+                                : "ring-pri ring-2 hover:ring-pri/50 bg-pri/10 anim"
                         }`}
                         onClick={toggleType}
                     >
@@ -104,9 +106,10 @@ export default function HeroSection() {
                     key={currentTextIndex}
                     text={currentText.texts[currentTextIndex]}
                 />
-                <span className="block md:mt-2">
+                <span className="block w-fit mx-auto relative md:mt-2">
                     {" "}
-                    with ads<span className="text-green-600">ie</span>
+                    with ads<span className="text-pri">ie</span>
+                    <PiTargetThin className=" text-pri inline ml-1 text-5xl" />
                 </span>
 
                 <Link
