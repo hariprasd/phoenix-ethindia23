@@ -1,4 +1,4 @@
-export default function Dashboard() {
+export default function DashboardDefault() {
     return (
         <section>
             <h1>Dashboard</h1>
