@@ -25,9 +25,9 @@ export default function Nav() {
                             {link.name}
                         </Link>
                     ))}
-                    <button className="bg-zinc-900 text-base font-light text-white rounded-full p-3 px-5">
+                    {/* <button className="bg-zinc-900 text-base font-light text-white rounded-full p-3 px-5">
                         Connect Wallet
-                    </button>
+                    </button> */}
                 </div>
             </ul>
         </nav>

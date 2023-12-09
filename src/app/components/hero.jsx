@@ -21,7 +21,7 @@ export default function HeroSection() {
         },
         {
             desc: (
-                <p className="text-3xl font-bold">
+                <p className="font-bold">
                     Watch <span className="text-green-600">• </span>Earn{" "}
                     <span className="text-green-600">• </span> Repeat
                 </p>
@@ -44,7 +44,7 @@ export default function HeroSection() {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.5, ease: "easeInOut" }}
-                        className="text-3xl font-bold"
+                        className="font-bold"
                     >
                         Advertise smart
                         <span className="text-green-600">• </span> Pay less{" "}
@@ -75,34 +75,34 @@ export default function HeroSection() {
                 <motion.button
                     whileTap={{ scale: 0.95 }}
                     transition={{ duration: 0.5 }}
-                    className="text-xs uppercase tracking-widest ring-green-600/50 bg-green-300/10 text-black hover:ring-green-400 ring-2 rounded-full px-6 p-3 mx-auto w-fit block "
+                    className="text-xs uppercase tracking-widest backdrop-blur-md ring-green-600/50 bg-green-300/10 text-black hover:ring-green-400 ring-2 rounded-full px-4 md:px-6 p-3 mx-auto w-fit block "
                     onClick={toggleType}
                 >
                     {type === "user"
-                        ? "Switch to Enterprise"
-                        : "Switch to User"}
-                    <HiOutlineSwitchVertical className="inline ml-1 mb-0.5 text-md" />
+                        ? " are you a Business Owner?"
+                        : "are you a User?"}
+                    {/* <HiOutlineSwitchVertical className="inline ml-1 mb-0.5 text-md" /> */}
                 </motion.button>
             </div>
-            <div className="text-6xl mt-8 tracking-tighter text-center font-black">
+            <div className="text-3xl md:text-6xl mt-8 tracking-tighter text-center font-black">
                 <AnimatedText
                     key={currentTextIndex}
                     text={currentText.texts[currentTextIndex]}
                 />
-                <span className="block mt-2">
+                <span className="block md:mt-2">
                     {" "}
                     with ads<span className="text-green-600">ie</span>
                 </span>
 
                 <Link
-                    className="pri-btn text-lg font-medium mt-16 px-8 block w-fit mx-auto"
+                    className="pri-btn md:text-lg font-medium mt-8 md:mt-16 px-8 block w-fit mx-auto"
                     href={"#"}
                 >
                     {currentChoice[1].cta}
                 </Link>
-                <p className=" tracking-normal mt-12 ">
-                    {currentChoice[1].desc}
-                </p>
+                <div className=" tracking-normal md:text-xl mt-6 text-green-800 ">
+                    {currentChoice[2].desc}
+                </div>
             </div>
         </div>
     );

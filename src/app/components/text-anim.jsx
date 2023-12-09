@@ -36,7 +36,7 @@ const AnimatedText = ({ text, duration = 0.8 }) => {
                     ))}
                     {/* Add a space after each word except the last */}
                     {wordIndex < words.length - 1 && (
-                        <p className="inline">&nbsp;</p>
+                        <p className="inline ml-1">&nbsp;</p>
                     )}
                 </span>
             ))}
