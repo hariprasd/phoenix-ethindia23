@@ -1,6 +1,4 @@
-# Adsie 🚀
-
-![Adsie Logo](src/assets/logo.png)
+# Adsie ![Adsie Logo](src/assets/logo.png)
 
 Adsie is a revolutionary platform where users can earn ADS tokens by engaging with ads posted by organizations. Our ERC20-based token, ADS, powers all transactions within the platform. Enterprises can seamlessly promote their products or services through images and videos, providing users with an opportunity to view and earn ADS tokens.
 
