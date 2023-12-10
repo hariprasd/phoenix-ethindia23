@@ -57,7 +57,7 @@ export default function CompanyDashboard() {
         const signer = provider.getSigner();
         const contract = new ethers.Contract(
             contractAddress,
-            ABI,
+             ABI,
             signer
         );
         let randomId = Math.random();
