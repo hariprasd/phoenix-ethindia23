@@ -1,23 +1,4 @@
-<!-- # Adsie <img src="src/assets/logo.png" alt="Logo" width="100" height="100"> -->
-
-<div id="title-container">
-  <h1>Adsie</h1>
-</div>
-<img id="logo" src="src/assets/logo.png" alt="Logo">
-
-<style>
-  #logo {
-    width: 50px; /* Adjust the width as needed */
-    height: 50px; /* Adjust the height as needed */
-    vertical-align: middle;
-  }
-
-  #title-container {
-    display: inline-block;
-    vertical-align: middle;
-  }
-</style>
-
+# Adsie <img src="src/assets/logo.png" alt="Logo" width="50" height="50">
 
 Adsie is a revolutionary platform where users can earn ADS tokens by engaging with ads posted by organizations. Our ERC20-based token, ADS, powers all transactions within the platform. Enterprises can seamlessly promote their products or services through images and videos, providing users with an opportunity to view and earn ADS tokens.
 
@@ -62,3 +43,12 @@ Check out our live demo [here](link-to-live-demo) to experience the power of Ads
 ### Enterprise's Dashboard
 <kbd> <img src="src/assets/Pages/user_side.png" alt="Enterprise's Dashboard" width="600" height="400"> </kbd>
 
+## Contributors
+
+Thanks to all the wonderful contributors who have helped make Adsie amazing:
+
+1. [Aniket Kumar](https://github.com/aniket736)
+2. [Abhishek Yadav](https://github.com/decentralized-86)
+3. [Hari Prasad](https://github.com/hariprasd)
+4. [G. Sreedhar](https://github.com/sreedhar-s)
+5. [Aakash S](https://github.com/aakash_as05)
