@@ -6,7 +6,8 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 import sendPushNotification from "../../register/sendPushNotifications";
 import { useAccount } from "wagmi";
 import { useEffect } from "react";
-import RegisterForm from "./register-user";
+import RegisterForm from "./register-company";
+import { ABI } from "../../../../contract/engagement-contract.json";
 import Link from "next/link";
 
 export default function Register() {
@@ -41,7 +42,7 @@ export default function Register() {
                         Go to Business Dashboard ↗
                     </Link>
                 )}
-                {isConnected && close && <RegisterForm />}
+                {isConnected && <RegisterForm />}
                 <Image
                     className="z-[-99] fixed -bottom-1/2 centerh"
                     src={wallet}

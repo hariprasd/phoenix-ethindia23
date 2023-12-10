@@ -1,10 +1,51 @@
+"use client";
+import "../../../../contract/engagement-contract.json";
 import { revenueData } from "@/assets/dummy";
 import Image from "next/image";
 import { FaEthereum } from "react-icons/fa";
 import tkn from "../../../assets/token.svg";
+import { useAccount } from "wagmi";
 
 import absbg from "../../../assets/abs-bg-2.png";
+import { useEffect, useState } from "react";
+import { ethers } from "ethers";
 export default function Earnings() {
+    const { address, isConnected } = useAccount();
+    const [balance, setBalance] = useState(0);
+    const tokenAddress = "0x35F60099FB588C0d59a467b86Ae002183548a43a";
+    const initializeEthers = async () => {
+        try {
+            const provider = new ethers.providers.Web3Provider(window.ethereum);
+            const [account] = await provider.listAccounts();
+            const balance = await provider.getBalance(account);
+            return provider;
+        } catch (error) {
+            console.error("Error initializing ethers:", error.message);
+        }
+    };
+    useEffect(() => {
+        const getEthers = async () => {
+            const provider = await initializeEthers();
+            console.log(provider);
+        };
+        getEthers();
+    }, []);
+
+    const fetchBalance = async () => {
+        const provider = await initializeEthers();
+        console.log(provider);
+        const signer = provider.getSigner();
+        const contract = new ethers.Contract(tokenAddress, ABI, signer);
+        const balance = await contract.balanceOf(address);
+        console.log(balance);
+        setBalance(balance);
+    };
+
+    useEffect(() => {
+        if (isConnected) {
+            fetchBalance();
+        }
+    }, [isConnected]);
     return (
         <section>
             <Image
@@ -17,7 +58,8 @@ export default function Earnings() {
                     <h2>Current Balance</h2>
                     <div className="flex gap-1 mt-4 text-4xl">
                         <Image src={tkn} className="inline text-pri w-6 mr-1" />
-                        5300 <span className="text-pri">ADS</span>
+                        {balance > 0 ? balance : 0.0}{" "}
+                        <span className="text-pri">ADS</span>
                     </div>
                 </div>
                 {revenueData.map((data, index) => (

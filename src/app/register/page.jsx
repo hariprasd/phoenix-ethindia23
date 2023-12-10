@@ -13,12 +13,12 @@ export default function Register() {
     const searchParams = useSearchParams();
     const type = searchParams.get("type");
     const close = searchParams.get("close");
-    console.log(useAccount());
+    // console.log(useAccount());
     const { address, isConnected } = useAccount();
 
     useEffect(() => {
         if (isConnected) {
-            console.log("Address is connected");
+            // console.log("Address is connected");
             sendPushNotification();
         }
     }, [isConnected]);
@@ -41,7 +41,7 @@ export default function Register() {
                         Go to Dashboard ↗
                     </Link>
                 )}
-                {isConnected && close && <RegisterForm />}
+                {isConnected && <RegisterForm />}
                 <Image
                     className="z-[-99] fixed -bottom-1/2 centerh"
                     src={wallet}
