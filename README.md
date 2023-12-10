@@ -1,4 +1,4 @@
-# Adsie <img src="src/assets/logo.png" alt="Logo" width="50" height="50">
+# Adsie <img src="src/assets/logo.png" alt="Logo" width="30" height="30">
 
 Adsie is a revolutionary platform where users can earn ADS tokens by engaging with ads posted by organizations. Our ERC20-based token, ADS, powers all transactions within the platform. Enterprises can seamlessly promote their products or services through images and videos, providing users with an opportunity to view and earn ADS tokens.
 
@@ -34,14 +34,14 @@ Check out our live demo [here](link-to-live-demo) to experience the power of Ads
 
 ### User's Dashboard
 
-<kbd> <img src="src/assets/Pages/user_side.png" alt="User's Dashboard" width="600" height="400"> </kbd>
+<kbd> <img src="src/assets/Pages/user_dashboard.png" alt="User's Dashboard" width="600" height="400"> </kbd>
 
 ### Enterprise's Side
 
 <kbd> <img src="src/assets/Pages/enterprise_side.png" alt="Enterprise's Side" width="600" height="400"> </kbd>
 
 ### Enterprise's Dashboard
-<kbd> <img src="src/assets/Pages/user_side.png" alt="Enterprise's Dashboard" width="600" height="400"> </kbd>
+<kbd> <img src="src/assets/Pages/enterprise_dashboard.png" alt="Enterprise's Dashboard" width="600" height="400"> </kbd>
 
 ## Contributors
 
