@@ -24,7 +24,7 @@ Welcome to Adsie, the future of advertising and tokenized engagement! Earn ADS t
 
 ## Live Demo 🚀
 
-Check out our live demo [here](link-to-live-demo) to experience the power of Adsie.
+Check out our live demo [here](https://adsie.vercel.app/) to experience the power of Adsie.
 
 ## Pages 📸
 
