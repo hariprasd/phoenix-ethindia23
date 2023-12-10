@@ -82,6 +82,9 @@ const AdCarousel = () => {
                     seconds
                 </div>
             )}
+            <div className="mt-8 text-center">
+                Organization: {adsData[currentAdIndex].name}
+            </div>
         </div>
     );
 };

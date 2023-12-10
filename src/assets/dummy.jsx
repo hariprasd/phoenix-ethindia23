@@ -6,17 +6,20 @@ export const adsData = [
         src: "/vids/scroll.mp4",
         isVideo: true,
         link: "https://scroll.io",
+        name: "Scroll"
     },
     {
         src: huddle,
         isVideo: false,
         link: "https://huddle01.com",
         timeout: 15,
+        name: "Huddle01"
     },
     {
         src: "/vids/push.mp4",
         isVideo: true,
         link: "https://push.io",
+        name: "Push Protocol"
     },
 ];
 
