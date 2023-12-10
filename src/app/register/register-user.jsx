@@ -14,6 +14,7 @@ export default function RegisterForm() {
         name: "",
         email: "",
     });
+    const [registerd , setRegistered ] = useState(false);
     const initializeEthers = async () => {
         try {
             const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -45,9 +46,20 @@ export default function RegisterForm() {
             signer
         );
         const tx = contract.registerUser(formData.name, formData.email);
-        await tx.wait();
-        redirect("/dashboard");
     };
+    const isUserRegistered = async() =>{
+        const provider = await initializeEthers();
+        console.log(provider);
+        const signer = provider.getSigner();
+        const contract = new ethers.Contract(
+            engagementContractAddress,
+            ABI,
+            signer
+        );
+        const registered = contract.isUserRegistered(address);
+        setRegistered(registerd);
+        console.log(registerd);
+    }
 
     const handleChange = (e) => {
         e.preventDefault();
