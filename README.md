@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Adsie <img src="src/assets/logo.png" alt="Logo" width="45" height="45">
 
-## Getting Started
+Adsie is a revolutionary platform where users can earn ADS tokens by engaging with ads posted by organizations. Our ERC20-based token, ADS, powers all transactions within the platform. Enterprises can seamlessly promote their products or services through images and videos, providing users with an opportunity to view and earn ADS tokens.
 
-First, run the development server:
+## Table of Contents
+- [Introduction](#introduction)
+- [Tech Stack](#tech-stack)
+- [Live Demo](#live-demo)
+- [Usage](#usage)
+- [Pages](#pages)
+  - [Homepage](#homepage)
+  - [User's Side](#users-side)
+  - [Enterprise Side](#enterprise-side)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Introduction 🌐📺💰
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Welcome to Adsie, the future of advertising and tokenized engagement! Earn ADS tokens by watching ads, and enterprises can boost their reach through our innovative platform. Get ready to dive into the world of decentralized advertising!
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Tech Stack 💻🔧
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Solidity**: Smart contracts for secure and transparent transactions.
+- **Next.js**: A React framework for building efficient and scalable web applications.
+- **Rainbow**: [Rainbow](https://github.com/nexgencode/rainbow), a versatile library for styling your Next.js applications with ease.
 
-## Learn More
+## Live Demo 🚀
 
-To learn more about Next.js, take a look at the following resources:
+Check out our live demo [here](link-to-live-demo) to experience the power of Adsie.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Pages 📸
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### User's Side
 
-## Deploy on Vercel
+<kbd> <img src="src/assets/Pages/user_side.png" alt="User's Side" width="600" height="400"> </kbd>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### User's Dashboard
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<kbd> <img src="src/assets/Pages/user_dashboard.png" alt="User's Dashboard" width="600" height="400"> </kbd>
+
+### Enterprise's Side
+
+<kbd> <img src="src/assets/Pages/enterprise_side.png" alt="Enterprise's Side" width="600" height="400"> </kbd>
+
+### Enterprise's Dashboard
+<kbd> <img src="src/assets/Pages/enterprise_dashboard.png" alt="Enterprise's Dashboard" width="600" height="400"> </kbd>
+
+## Contributors
+
+Thanks to all the wonderful contributors who have helped make Adsie amazing:
+
+1. [Aniket Kumar](https://github.com/aniket736)
+2. [Abhishek Yadav](https://github.com/decentralized-86)
+3. [Hari Prasad](https://github.com/hariprasd)
+4. [G. Sreedhar](https://github.com/sreedhar-s)
+5. [Aakash S](https://github.com/aakash_as05)
